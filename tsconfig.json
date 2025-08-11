@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+    "rootDir": ".",
+    
+    // 가장 엄격한 타입 체크 설정
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    
+    // 미사용 코드 체크
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    
+    // 도달하지 않는 코드 체크
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    
+    // 암시적 반환 체크
+    "noImplicitReturns": true,
+    
+    // 인덱스 서명 체크
+    "noUncheckedIndexedAccess": true,
+    
+    // 오버라이드 체크
+    "noImplicitOverride": true,
+    
+    // 속성 서명 체크
+    "exactOptionalPropertyTypes": true,
+    
+    // 기타 엄격 설정
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": false,
+    
+    // 모듈 및 해석 설정
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    
+    // 출력 설정
+    "sourceMap": true,
+    "removeComments": true,
+    
+    // 경로 매핑
+    "baseUrl": ".",
+    "paths": {
+      "either": ["./src/index"],
+      "@src/*": ["./src/*"],
+      "@core": ["./src/core/index"],
+      "@core/*": ["./src/core/*"],
+      "@function": ["./src/function/index"],
+      "@function/*": ["./src/function/*"],
+      "@util": ["./src/util/index"],
+      "@util/*": ["./src/util/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "sample/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+}

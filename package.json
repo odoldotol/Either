@@ -1,0 +1,79 @@
+{
+  "name": "@odoldotol/either",
+  "version": "0.1.1",
+  "description": "A TypeScript Either monad implementation",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepublishOnly": "npm run build",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "ts-node": "ts-node -r tsconfig-paths/register",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "either",
+    "monad",
+    "fp"
+  ],
+  "author": "odoldotol",
+  "license": "MIT",
+  "devDependencies": {
+    "@fxts/core": "^1.15.0",
+    "@types/jest": "^29.5.0",
+    "@types/ramda": "^0.31.0",
+    "jest": "^30.0.5",
+    "ramda": "^0.31.3",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/odoldotol/Either.git"
+  },
+  "bugs": {
+    "url": "https://github.com/odoldotol/Either/issues"
+  },
+  "homepage": "https://github.com/odoldotol/Either#readme",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": ["ts", "js", "json"],
+    "testMatch": [
+      "<rootDir>/src/**/*.spec.ts",
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "moduleNameMapper": {
+      "^@core$": "<rootDir>/src/core/index.ts",
+      "^@function$": "<rootDir>/src/function/index.ts",
+      "^@util$": "<rootDir>/src/util/index.ts"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.spec.ts",
+      "!src/**/*.test.ts"
+    ]
+  }
+}

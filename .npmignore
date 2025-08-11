@@ -1,0 +1,14 @@
+coverage/
+src/
+sample/
+
+.gitignore
+.git/
+.DS_Store
+.vscode/
+.idea/
+
+tsconfig.json
+tsconfig.*.json
+
+*.log
