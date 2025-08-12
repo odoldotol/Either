@@ -14,6 +14,8 @@ npm install @odoldotol/either
 
 This library was created while using [FxTS](https://fxts.dev/), a functional library with strengths in lazy evaluation and concurrent request handling.
 
+This means it is designed to be used with other functional libraries, not dependent on FxTS.
+
 For example, let’s consider three functions: 
 
 ```typescript
@@ -64,7 +66,7 @@ even if there are errors or rejections.
 
 ```typescript
 import * as F from '@fxts/core';
-import * as E from 'either';
+import * as E from '@odoldotol/either';
 
 await F.pipe(
   F.toAsync([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
@@ -99,7 +101,7 @@ log as follow.
 ## What is
 
 ```typescript
-import Either from 'either';
+import Either from '@odoldotol/either';
 
 const right11 = Either.right(11);
 const left11 = Either.left("11");
