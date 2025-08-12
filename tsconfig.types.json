@@ -5,7 +5,16 @@
     "outDir": "./dist/types",
     "emitDeclarationOnly": true,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@core": ["./core/index"],
+      "@core/*": ["./core/*"],
+      "@function": ["./function/index"],
+      "@function/*": ["./function/*"],
+      "@util": ["./util/index"],
+      "@util/*": ["./util/*"]
+    }
   },
   "include": [
     "src/**/*"

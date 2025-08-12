@@ -5,7 +5,16 @@
     "module": "CommonJS",
     "outDir": "./dist/cjs",
     "declaration": false,
-    "declarationMap": false
+    "declarationMap": false,
+    "baseUrl": "./src",
+    "paths": {
+      "@core": ["./core/index"],
+      "@core/*": ["./core/*"],
+      "@function": ["./function/index"],
+      "@function/*": ["./function/*"],
+      "@util": ["./util/index"],
+      "@util/*": ["./util/*"]
+    }
   },
   "include": [
     "src/**/*"
