@@ -13,7 +13,6 @@ npm install @odoldotol/either
 ## Usage
 
 This library was created while using [FxTS](https://fxts.dev/), a functional library with strengths in lazy evaluation and concurrent request handling.
-
 (not dependent on FxTS).
 
 This means it is designed to be used with other functional libraries.
